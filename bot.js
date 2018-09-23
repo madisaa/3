@@ -243,39 +243,9 @@ client.on('message', message => {
       message.author.sendEmbed(Embed11)
     }
 }); 
-client.on("message", message => {
 
-            if (message.content.startsWith(prefix + "bc")) {
-                         if (!message.member.hasPermission("ADMINISTRATOR"))  return;
-  let args = message.content.split(" ").slice(1);
-  var argresult = args.join(' '); 
-  message.guild.members.filter(m => m.presence.status !== 'all').forEach(m => {
- m.send(`${argresult}\n ${m}`);
-})
- message.channel.send(`\`${message.guild.members.filter(m => m.presence.status !== 'all').size}\` : عدد الاعضاء المستلمين`); 
- message.delete(); 
-};     
-});
-client.on('message', message => {
-if (message.content.startsWith(".ban")) {
-    var mention = message.mentions.members.first();
-    if(!mention) return message.channel.send("يجب منشن العضو");
 
-    mention.ban("By: " + message.author.tag);
-    
-    message.channel.send("تم أعطاء باند الى : " + mention.tag);
-};
-});
-client.on('message', message => {
-if (message.content.startsWith(".kick")) {
-    var mention = message.mentions.members.first();
-    if(!mention) return message.channel.send("يجب منشن العضو");
 
-    mention.kick("By: " + message.author.tag);
-    
-    message.channel.send("تم أعطاء كيك الى : " + mention.tag);
-};
-});
 client.on('message',async msg => {//Alpha Codes
 //Alpha Codes//Alpha Codes//Alpha Codes//Alpha Codes//Alpha Codes
   var prefix = ".";//Alpha Codes
