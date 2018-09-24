@@ -1003,6 +1003,16 @@ message.channel.sendEmbed(embed);
 console.log('[38ab] Send By: ' + message.author.username)
   }
 });
+client.on ("guildMemberAdd", member => {
+
+   var role = member.guild.roles.find ("name", "GR.");
+   member.addRole (role);
+
+})
+
+client.on ("guildMemberRemove", member => {
+
+})
 
 
 client.login(process.env.BOT_TOKEN);
